@@ -4,22 +4,13 @@ import MyTitle from "./components/MyTitle";
 
 function App() {
 
-const pokemonList = [
-  {
-    name: "bulbasaur",
-    imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
-  {
-    name: "mew",
-  },
-];
   return (
     <section>
       <MyTitle />
-      <PokemonCard pokemon={pokemonList[0]} />
+      <PokemonCard pokeName="bulbasaur" imgSrc="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" />
     </section>
   );
 }
+
 
 export default App;

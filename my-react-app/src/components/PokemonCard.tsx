@@ -1,11 +1,17 @@
-function PokemonCard ({ pokemon }){
+interface CardI{
+pokeName : string;
+imgSrc : string;
+
+}
+
+function PokemonCard ({pokeName, imgSrc }: CardI){
 
 
   return(
 
 <figure>
-    {pokemon.imgSrc ? (<img src={pokemon.imgSrc}></img>):(<p>???</p>)}  
-    <figcaption>{pokemon.name}</figcaption>
+    {imgSrc ? (<img src={imgSrc}></img>):(<p>???</p>)}  
+    <figcaption>{pokeName}</figcaption>
 </figure>
 )
 
