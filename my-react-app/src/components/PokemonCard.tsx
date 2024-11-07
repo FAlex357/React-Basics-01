@@ -1,25 +1,21 @@
-interface CardI{
-pokeName : string;
-imgSrc : string;
-
+interface CardI {
+	pokeData: {
+		imgSrc?: string;
+		name: string;
+	};
 }
 
-function PokemonCard ({pokeName, imgSrc }: CardI){
-
-
-  return(
-
-<figure>
-    {imgSrc ? (<img src={imgSrc}></img>):(<p>???</p>)}  
-    <figcaption>{pokeName}</figcaption>
-</figure>
-)
-
-}
-
-
+const PokemonCard = ({ pokeData }: CardI) => {
+	return (
+		<figure>
+			{pokeData.imgSrc !== undefined ? (
+				<img src={pokeData.imgSrc} alt={pokeData.name} />
+			) : (
+				<p>???</p>
+			)}
+			<h1>{pokeData.name}</h1>
+		</figure>
+	);
+};
 
 export default PokemonCard;
-
-
-
